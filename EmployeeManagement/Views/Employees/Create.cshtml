@@ -1,0 +1,39 @@
+﻿@model EmployeeManagement.Models.Employee
+@using System.Web.Mvc
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div>
+
+        <h2>Create New Employee</h2>
+
+        @using (Html.BeginForm())
+        {
+            <div>
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Department)
+                @Html.TextBoxFor(m => m.Department)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Salary)
+                @Html.TextBoxFor(m => m.Salary)
+            </div>
+            <button type="submit">Create</button>
+        }
+    </div>
+
+</body>
+</html>
